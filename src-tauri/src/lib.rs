@@ -977,6 +977,7 @@ fn build_drawtext_filters(
 
     // Build font option once for drawtext filter
     let font_option = first_existing_font()
+        .as_deref()
         .map(build_font_option)
         .unwrap_or_default();
 
